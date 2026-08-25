@@ -1,0 +1,343 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT" pages="4">
+  <diagram id="Use_Case_Diagram" name="Use Case Diagram">
+    <mxGraphModel dx="1572" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uc_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;" value="Use Case Diagram — AI-Powered Log Analysis &amp; Incident Triage System" vertex="1">
+          <mxGeometry height="40" width="1500" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;strokeWidth=2;fillColor=none;align=left;verticalAlign=top;spacingTop=12;fontStyle=1;" value="AI-Powered Log Analysis &amp; Incident Triage System" vertex="1">
+          <mxGeometry height="760" width="1120" x="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="u_ingest" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Ingest Logs" vertex="1">
+          <mxGeometry height="70" width="180" x="340" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="u_parse" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Parse &amp; Normalize Logs" vertex="1">
+          <mxGeometry height="70" width="200" x="600" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="u_dedupe" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Deduplicate Logs" vertex="1">
+          <mxGeometry height="70" width="200" x="600" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="u_store" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Store &amp; Index Logs" vertex="1">
+          <mxGeometry height="70" width="200" x="600" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="u_detect" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Detect Anomalies / Critical Errors" vertex="1">
+          <mxGeometry height="70" width="250" x="910" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="u_rca" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Generate RCA" vertex="1">
+          <mxGeometry height="70" width="190" x="930" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="u_fix" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Generate Remediation Suggestions" vertex="1">
+          <mxGeometry height="70" width="250" x="900" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="u_viewlogs" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="View Live Logs" vertex="1">
+          <mxGeometry height="70" width="180" x="370" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="u_search" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Search / Filter Logs" vertex="1">
+          <mxGeometry height="70" width="200" x="630" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="u_incident" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="View Incident" vertex="1">
+          <mxGeometry height="70" width="180" x="850" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="u_status" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Update Incident Status" vertex="1">
+          <mxGeometry height="70" width="210" x="1100" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="u_error" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="View Error Rate" vertex="1">
+          <mxGeometry height="70" width="180" x="350" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="u_rcareport" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="View RCA Report" vertex="1">
+          <mxGeometry height="70" width="200" x="600" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="u_alert" parent="uc_boundary" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Receive Incident Alerts" vertex="1">
+          <mxGeometry height="70" width="220" x="900" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="a_micro" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Microservices / Log Sources" vertex="1">
+          <mxGeometry height="120" width="120" x="55" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="a_eng" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Software Engineer / SRE" vertex="1">
+          <mxGeometry height="120" width="120" x="55" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="a_llm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="LLM Service" vertex="1">
+          <mxGeometry height="120" width="120" x="1420" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="a_alert" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Slack / Discord" vertex="1">
+          <mxGeometry height="120" width="120" x="1420" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_micro_u_ingest" edge="1" parent="1" source="a_micro" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_ingest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_eng_u_viewlogs" edge="1" parent="1" source="a_eng" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_viewlogs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_eng_u_search" edge="1" parent="1" source="a_eng" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_eng_u_incident" edge="1" parent="1" source="a_eng" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_incident">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_eng_u_status" edge="1" parent="1" source="a_eng" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_eng_u_error" edge="1" parent="1" source="a_eng" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_eng_u_rcareport" edge="1" parent="1" source="a_eng" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_rcareport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_llm_u_rca" edge="1" parent="1" source="a_llm" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_rca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_llm_u_fix" edge="1" parent="1" source="a_llm" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_fix">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a_alert_u_alert" edge="1" parent="1" source="a_alert" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;" target="u_alert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_u_ingest_u_parse" edge="1" parent="1" source="u_ingest" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_parse" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_u_ingest_u_dedupe" edge="1" parent="1" source="u_ingest" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_dedupe" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_u_ingest_u_store" edge="1" parent="1" source="u_ingest" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_store" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_u_detect_u_rca" edge="1" parent="1" source="u_detect" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_rca" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_u_rca_u_fix" edge="1" parent="1" source="u_rca" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_fix" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_u_incident_u_rcareport" edge="1" parent="1" source="u_incident" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_rcareport" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_rca_detect" edge="1" parent="1" source="u_rca" style="dashed=1;endArrow=open;html=1;fontSize=11;strokeWidth=1.2;" target="u_detect" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="DFD_Level_0" name="DFD Level 0">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d0_title" parent="1" value="DFD Level 0 — System Context" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;" vertex="1">
+          <mxGeometry x="30" y="20" width="1500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e_micro" parent="1" value="Microservices / Log Sources" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="70" y="280" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p_system" parent="1" value="AI-Powered Log Analysis &amp; Incident Triage System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=15;" vertex="1">
+          <mxGeometry x="600" y="250" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="e_eng" parent="1" value="Software Engineer / SRE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1170" y="170" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_llm" parent="1" value="LLM Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1170" y="330" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_alert" parent="1" value="Slack / Discord" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1170" y="500" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" parent="1" value="Log Data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="e_micro" target="p_system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" parent="1" value="Live Logs / Incidents / RCA" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p_system" target="e_eng">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" parent="1" value="Status Updates / Queries" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="e_eng" target="p_system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" parent="1" value="RCA Request / Error Context" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p_system" target="e_llm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" parent="1" value="RCA + Remediation Suggestions" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="e_llm" target="p_system">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" parent="1" value="Incident Alerts" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p_system" target="e_alert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="DFD_Level_1" name="DFD Level 1">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d1_title" parent="1" value="DFD Level 1 — Major Internal Processes" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;" vertex="1">
+          <mxGeometry x="30" y="20" width="1500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l1_micro" parent="1" value="Microservices / Log Sources" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="50" y="100" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l1_eng" parent="1" value="Software Engineer / SRE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="50" y="760" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l1_llm" parent="1" value="LLM Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1370" y="300" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l1_alert" parent="1" value="Slack / Discord" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1370" y="600" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" value="P1 — Log Ingestion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="300" y="100" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" value="P2 — Log Processing &amp; Deduplication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="560" y="100" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" value="P3 — Storage &amp; Indexing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="820" y="100" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" value="P4 — AI Triage &amp; RCA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="820" y="330" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="1" value="P5 — Incident Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="560" y="560" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" parent="1" value="P6 — Dashboard &amp; Alerting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="820" y="700" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" value="D1 — PostgreSQL" style="shape=mxgraph.flowchart.data_storage;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1">
+          <mxGeometry x="280" y="330" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" parent="1" value="D2 — Elasticsearch" style="shape=mxgraph.flowchart.data_storage;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1">
+          <mxGeometry x="520" y="330" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" value="D3 — Redis Cache" style="shape=mxgraph.flowchart.data_storage;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1">
+          <mxGeometry x="520" y="450" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f1" parent="1" value="Raw Logs" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="l1_micro" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f2" parent="1" value="Parsed / Normalized Logs" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p1" target="p2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f3" parent="1" value="Indexed Log Records" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p2" target="p3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f4" parent="1" value="Structured Data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p3" target="D1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f5" parent="1" value="Search Index" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p3" target="D2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f6" parent="1" value="Processed Error Context" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p2" target="p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f7" parent="1" value="Cache Lookup / Cached RCA" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p4" target="D3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f8" parent="1" value="RCA Request" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p4" target="l1_llm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f9" parent="1" value="RCA + Suggestions" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="l1_llm" target="p4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f10" parent="1" value="Incident Data" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p4" target="p5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f11" parent="1" value="Status / Incident Updates" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p5" target="p6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f12" parent="1" value="Live Logs / RCA / Metrics" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p6" target="l1_eng">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f13" parent="1" value="Engineer Queries / Status Changes" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="l1_eng" target="p5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1f14" parent="1" value="Alerts" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p6" target="l1_alert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="DFD_Level_2" name="DFD Level 2">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d2_title" parent="1" value="DFD Level 2 — AI Triage &amp; Root Cause Analysis (P4)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=22;fontStyle=1;" vertex="1">
+          <mxGeometry x="20" y="20" width="1550" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_in" parent="1" value="Processed Logs / Error Context" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="50" y="150" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_llm" parent="1" value="LLM Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1260" y="450" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_out" parent="1" value="Incident Management" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1">
+          <mxGeometry x="1260" y="700" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p41" parent="1" value="P4.1 — Detect Critical / Anomalous Error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="350" y="120" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p42" parent="1" value="P4.2 — Generate Error Signature" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="650" y="120" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p43" parent="1" value="P4.3 — Check Redis Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="650" y="300" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p44" parent="1" value="P4.4 — Send Error Context to LLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="920" y="300" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p45" parent="1" value="P4.5 — Generate RCA Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="920" y="470" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p46" parent="1" value="P4.6 — Generate Remediation Suggestions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="620" y="560" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p47" parent="1" value="P4.7 — Store AI Analysis in Redis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="350" y="560" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p48" parent="1" value="P4.8 — Send RCA to Incident Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1">
+          <mxGeometry x="920" y="680" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_cache" parent="1" value="D3 — Redis Cache" style="shape=mxgraph.flowchart.data_storage;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1">
+          <mxGeometry x="350" y="350" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" parent="1" value="Processed Error Context" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p2_in" target="p41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q2" parent="1" value="Critical / Anomalous Error" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p41" target="p42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q3" parent="1" value="Error Signature" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p42" target="p43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q4" parent="1" value="Cache Lookup" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p43" target="d2_cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q5" parent="1" value="Cached RCA" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="d2_cache" target="p43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q6" parent="1" value="Cache Miss / Error Context" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p43" target="p44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q7" parent="1" value="RCA Request" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p44" target="p2_llm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q8" parent="1" value="RCA + Suggestions" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p2_llm" target="p45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q9" parent="1" value="RCA Report" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p45" target="p46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q10" parent="1" value="AI Analysis" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p46" target="p47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q11" parent="1" value="Store Analysis" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p47" target="d2_cache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q12" parent="1" value="RCA + Suggestions" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p46" target="p48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="q13" parent="1" value="Incident Update" style="endArrow=block;html=1;rounded=0;strokeWidth=1.5;" edge="1" source="p48" target="p2_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
